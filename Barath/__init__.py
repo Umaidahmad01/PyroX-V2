@@ -5,7 +5,7 @@ from pyrogram import Client
 from pymongo import MongoClient
 import motor.motor_asyncio
 
-FORMAT = "[Barath]: %(message)s"
+FORMAT = "[pikasub]: %(message)s"
 
 logging.basicConfig(level=logging.INFO, handlers=[logging.FileHandler('logs.txt'),
                                                     logging.StreamHandler()], format=FORMAT)
@@ -39,7 +39,7 @@ def get_readable_time(seconds: int) -> str:
 logger = logging.getLogger(__name__)
 
 # Set up database connection
-DB_URL = os.getenv("DB_URL","mongodb+srv://publicDB:publicDBbyKira@public.twckcqf.mongodb.net/?retryWrites=true&w=majority")
+DB_URL = os.getenv("DB_URL","")
 
 
 
@@ -48,7 +48,7 @@ API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
 SESSION = os.getenv("SESSION")
 TOKEN = os.getenv("TOKEN")
-DB_NAME = os.getenv("DB_NAME","PyroX-UB")
+DB_NAME = os.getenv("DB_NAME","")
 
 cli = motor.motor_asyncio.AsyncIOMotorClient(DB_URL)
 db=cli[DB_NAME]
