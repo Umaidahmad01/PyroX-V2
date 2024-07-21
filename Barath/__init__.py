@@ -44,10 +44,10 @@ DB_URL = os.getenv("DB_URL","mongodb+srv://Umaid:umaid@cluster0.k2yxsvu.mongodb.
 
 
 # Set up bot configurations
-API_ID = os.getenv("API_ID")
-API_HASH = os.getenv("API_HASH")
-SESSION = os.getenv("SESSION")
-TOKEN = os.getenv("TOKEN")
+API_ID = os.getenv("API_ID","20718334")
+API_HASH = os.getenv("API_HASH","4e81464b29d79c58d0ad8a0c55ece4a5")
+SESSION = os.getenv("SESSION","5585016974")
+TOKEN = os.getenv("TOKEN","7232281089:AAGbNXoa8S93IBG0r2v_93q9G8TJbrHwVKw")
 DB_NAME = os.getenv("DB_NAME","cluster0")
 
 cli = motor.motor_asyncio.AsyncIOMotorClient(DB_URL)
