@@ -39,7 +39,7 @@ def get_readable_time(seconds: int) -> str:
 logger = logging.getLogger(__name__)
 
 # Set up database connection
-DB_URL = os.getenv("DB_URL","")
+DB_URL = os.getenv("DB_URL","mongodb+srv://Umaid:umaid@cluster0.k2yxsvu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 
 
@@ -48,7 +48,7 @@ API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
 SESSION = os.getenv("SESSION")
 TOKEN = os.getenv("TOKEN")
-DB_NAME = os.getenv("DB_NAME","")
+DB_NAME = os.getenv("DB_NAME","cluster0")
 
 cli = motor.motor_asyncio.AsyncIOMotorClient(DB_URL)
 db=cli[DB_NAME]
